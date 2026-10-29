@@ -426,3 +426,12 @@ FodyWeavers.xsd
 
 # Official VS Code C# Dev Kit Extension exclusion
 #*.lscache
+
+# --- galeria.aycmetrologia.com ---
+# Videos y archivos pesados viven solo en el servidor (subidos por SFTP), nunca en git
+public/media/videos/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm

@@ -1,0 +1,10 @@
+services:
+  web:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    volumes:
+      # Carpetas (no archivos sueltos) para que rsync pueda reemplazar su contenido sin reiniciar
+      - ./public:/usr/share/nginx/html:ro
+      - ./nginx:/etc/nginx/conf.d:ro
+    ports:
+      - "127.0.0.1:8081:80"
